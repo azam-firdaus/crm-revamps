@@ -9,7 +9,7 @@ const UserList: React.FC = () => {
       <div className="min-h-screen">
         
         
-        <div className=" px-8 py-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
+        <div className=" px-8 py-4 bg-blue-100 rounded-lg shadow-md ">
           <div className="flex items-center justify-between">
             <span className="text-sm font-light text-gray-600 dark:text-gray-400">Mar 10, 2019</span>
             

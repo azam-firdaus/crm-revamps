@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { HomeIcon, UserIcon, CogIcon, PlusIcon } from '@heroicons/react/24/outline';
+import { 
+    HomeIcon, UserIcon, 
+    CogIcon, PlusIcon, 
+    FunnelIcon, CurrencyDollarIcon,
+    ListBulletIcon, BriefcaseIcon,
+    BanknotesIcon, DocumentTextIcon,
+    BookOpenIcon
+ } from '@heroicons/react/24/outline';
 import Image from 'next/image'
 
 const Sidebar: React.FC = () => {
@@ -37,7 +44,7 @@ const Sidebar: React.FC = () => {
                 {/* #################### START Leads #################### */}
                 <div className={`relative flex items-center p-2 ${isActive('/lead') ? 'text-sky-500 ' : ' hover:bg-gray-300'} group h-12 rounded-lg transform transition-transform duration-200 hover:scale-95`}>
                     <Link href="/lead" className="flex items-center w-full">
-                        <UserIcon className="h-6 w-6 mr-2" />
+                        <FunnelIcon className="h-6 w-6 mr-2" />
                         {!isCollapsed && 'Leads'}
                     </Link>
                     {!isCollapsed && (
@@ -51,7 +58,7 @@ const Sidebar: React.FC = () => {
                 {/* #################### START Opportunities #################### */}
                 <div className={`relative flex items-center p-2 ${isActive('/opportunity') ? 'text-sky-500 ' : ' hover:bg-gray-300'} group h-12 rounded-lg transform transition-transform duration-200 hover:scale-95`}>
                     <Link href="/opportunity" className="flex items-center w-full">
-                        <UserIcon className="h-6 w-6 mr-2" />
+                        <CurrencyDollarIcon className="h-6 w-6 mr-2" />
                         {!isCollapsed && 'Opportunities'}
                     </Link>
                     {!isCollapsed && (
@@ -65,7 +72,7 @@ const Sidebar: React.FC = () => {
                 {/* #################### START Requirements #################### */}
                 <div className={`relative flex items-center p-2 ${isActive('/requirement') ? 'text-sky-500 ' : ' hover:bg-gray-300'} group h-12 rounded-lg transform transition-transform duration-200 hover:scale-95`}>
                     <Link href="/requirement" className="flex items-center w-full">
-                        <UserIcon className="h-6 w-6 mr-2" />
+                        <ListBulletIcon className="h-6 w-6 mr-2" />
                         {!isCollapsed && 'Requirements'}
                     </Link>
                     {!isCollapsed && (
@@ -79,7 +86,7 @@ const Sidebar: React.FC = () => {
                 {/* #################### START Business Cases #################### */}
                 <div className={`relative flex items-center p-2 ${isActive('/bc') ? 'text-sky-500 ' : ' hover:bg-gray-300'} group h-12 rounded-lg transform transition-transform duration-200 hover:scale-95`}>
                     <Link href="/bc" className="flex items-center w-full">
-                        <UserIcon className="h-6 w-6 mr-2" />
+                        <BriefcaseIcon className="h-6 w-6 mr-2" />
                         {!isCollapsed && 'Business Cases'}
                     </Link>
                     {!isCollapsed && (
@@ -93,7 +100,7 @@ const Sidebar: React.FC = () => {
                 {/* #################### START Quotations #################### */}
                 <div className={`relative flex items-center p-2 ${isActive('/quotation') ? 'text-sky-500 ' : ' hover:bg-gray-300'} group h-12 rounded-lg transform transition-transform duration-200 hover:scale-95`}>
                     <Link href="/quotation" className="flex items-center w-full">
-                        <UserIcon className="h-6 w-6 mr-2" />
+                        <BanknotesIcon className="h-6 w-6 mr-2" />
                         {!isCollapsed && 'Quotations'}
                     </Link>
                     {!isCollapsed && (
@@ -107,7 +114,7 @@ const Sidebar: React.FC = () => {
                 {/* #################### START SALE PKD #################### */}
                 <div className={`relative flex items-center p-2 ${isActive('/pkd') ? 'text-sky-500 ' : ' hover:bg-gray-300'} group h-12 rounded-lg transform transition-transform duration-200 hover:scale-95`}>
                     <Link href="/pkd" className="flex items-center w-full">
-                        <UserIcon className="h-6 w-6 mr-2" />
+                        <DocumentTextIcon className="h-6 w-6 mr-2" />
                         {!isCollapsed && 'Sales PKD'}
                     </Link>
                     {!isCollapsed && (
@@ -119,10 +126,15 @@ const Sidebar: React.FC = () => {
                 
 
                 <hr className="my-2 border-gray-300" />
+                <Link href="/Directory" className={`flex items-center p-2 ${isActive('/Directory') ? 'text-sky-500 ' : ' hover:bg-gray-300'} h-12 rounded-lg transform transition-transform duration-200 hover:scale-95`}>
+                    <BookOpenIcon className="h-6 w-6 mr-2" />
+                    {!isCollapsed && 'Directory'}
+                </Link>
                 <Link href="/settings" className={`flex items-center p-2 ${isActive('/settings') ? 'text-sky-500 ' : ' hover:bg-gray-300'} h-12 rounded-lg transform transition-transform duration-200 hover:scale-95`}>
                     <CogIcon className="h-6 w-6 mr-2" />
                     {!isCollapsed && 'Settings'}
                 </Link>
+                
             </nav>
         </div>
     );
