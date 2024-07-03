@@ -25,14 +25,14 @@ const Sidebar: React.FC = () => {
         <div className={`font-medium h-screen ${isCollapsed ? 'w-20' : 'w-64'} bg-slate-100 text-black transition-width duration-700`}>
             <div className="p-4 flex items-center">
                 <Image
-                    src="/logo.ico"
+                    src="/crm.svg"
                     alt="Logo"
-                    width={800}
+                    width={500}
                     height={500}
                     className="h-8 w-8 cursor-pointer" 
                     onClick={toggleSidebar}
                 />
-                {!isCollapsed && <h1 className="text-2xl font-bold ps-7">CRM</h1>}
+                {!isCollapsed && <h1 className="text-2xl font-bold ps-2">CRM</h1>}
             </div>
             <nav className="mt-10">
                 <Link href="/dashboard" className={`flex items-center p-2 ${isActive('/dashboard') ? 'text-sky-500 ' : ' hover:bg-gray-300'} h-12 rounded-lg transform transition-transform duration-200 hover:scale-95`}>
