@@ -59,7 +59,9 @@ const Dashboard: React.FC = () => {
           </div>
           <div className="absolute bottom-4 right-4 text-black flex flex-col space-y-1">
             <span className="font-bold text-blue-900" >Manage Leads</span>
-            <span className="text-blue-900">+ Add new leads</span>
+            <Link href="/lead/create">
+              <span className="text-blue-900">+ Add new leads</span>
+            </Link>
           </div>
         </div>
 
@@ -74,7 +76,9 @@ const Dashboard: React.FC = () => {
           </div>
           <div className="absolute bottom-4 right-4 text-black flex flex-col space-y-1">
             <span className="font-bold text-blue-900" >Manage Opportunities</span>
-            <span className="text-blue-900">+ Add new opportunity</span>
+            <Link href="/opportunity/create">
+              <span className="text-blue-900">+ Add new opportunity</span>
+            </Link>
           </div>
         </div>
 
@@ -89,7 +93,9 @@ const Dashboard: React.FC = () => {
           </div>
           <div className="absolute bottom-4 right-4 text-black flex flex-col space-y-1">
             <span className="font-bold text-blue-900" >Manage Requirements</span>
-            <span className="text-blue-900">+ Add new requirement</span>
+            <Link href="/requirement/create">
+              <span className="text-blue-900">+ Add new requirement</span>
+            </Link>
           </div>
         </div>
 
@@ -119,7 +125,9 @@ const Dashboard: React.FC = () => {
           </div>
           <div className="absolute bottom-4 right-4 text-black flex flex-col space-y-1">
             <span className="font-bold text-blue-900" >Manage PKD</span>
-            <span className="text-blue-900">+ Generate PKD</span>
+            <Link href="/pkd/create">
+              <span className="text-blue-900">+ Generate PKD</span>
+            </Link>
           </div>
         </div>
 

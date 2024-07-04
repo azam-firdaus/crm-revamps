@@ -2,6 +2,14 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import Image from 'next/image'
 import Link from 'next/link';
+import { 
+  HomeIcon, UserIcon, 
+  CogIcon, PlusIcon, 
+  FunnelIcon, CurrencyDollarIcon,
+  ListBulletIcon, BriefcaseIcon,
+  BanknotesIcon, DocumentTextIcon,
+  BookOpenIcon, PencilSquareIcon
+} from '@heroicons/react/24/outline';
 
 const UserList: React.FC = () => {
   return (
@@ -9,52 +17,56 @@ const UserList: React.FC = () => {
       <div className="min-h-screen">
         
         
-        <div className=" px-8 py-4 bg-blue-100 rounded-lg shadow-md ">
+        <div className="relative px-8 py-4 bg-blue-100 rounded-lg shadow-md w-full">
           <div className="flex items-center justify-between">
             <span className="text-sm font-light text-gray-600 dark:text-gray-400">Mar 10, 2019</span>
             
-            <Link href="#" className="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500" role="link">
-              Design
-            </Link>
           </div>
           <div className="mt-2">
-          <p className="text-xl font-bold text-gray-700 dark:text-white ">
-              Welcome back, Farid
+            <p className="text-xl font-bold text-blue-500 ">
+              Transform Leads into Loyal Customers
             </p>
-            <Link href="#" className="text-xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline" role="link">
-              Accessibility tools for designers and developers
-            </Link>
-            <p className="mt-2 text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos enim reprehenderit nisi, accusamus delectus nihil quis facere in modi ratione libero!</p>
-          </div>
-          <div className="flex items-center justify-between mt-4">
-            <Link href="#" className="text-blue-600 dark:text-blue-400 hover:underline" role="link">
-              Read more
-            </Link>
-
-            <div className="flex items-center">
-              <Image
-                src="/vercel.svg"
-                alt="avatar"
-                width={800}
-                height={500}
-                className="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block"
-              />
-              
-              <Link href="#" className="font-bold text-gray-700 cursor-pointer dark:text-gray-200" role="link">
-                Khatab wedaa
-              </Link>
-            </div>
+            <p className="text-lg mt-3 font-bold text-blue-900 ">
+              Effortlessly organize, track, and nurture leads from 
+            </p>
           </div>
         </div>
 
 
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="relative bg-white border border-blue-900 border-opacity-30 p-4 rounded-lg shadow-sm w-full h-64">
+            <div className="flex flex-col items-start space-y-1">
+              <div className="flex items-center space-x-2">
+                <FunnelIcon className="h-10 w-10 text-blue-700" />
+                <span className="text-blue-900 font-bold text-lg ">Capture New Leads</span>
+              </div>
+              <span className="text-blue-900 ">Add a new lead to your pipeline.</span>
+            </div>
+            <div className="absolute bottom-4 right-4 text-black flex flex-col space-y-1">
+              {/* <span className="font-bold text-blue-900" >Manage Leads</span> */}
+              <Link href="/lead/create">
+                <span className="text-blue-900">Add new leads</span>
+              </Link>
+            </div>
+          </div>
 
-        <h1 className="text-2xl font-bold">Users List</h1>
-        <ul className="mt-4">
-          <li>User 1</li>
-          <li>User 2</li>
-          <li>User 3</li>
-        </ul>
+
+          <div className="relative bg-white border border-blue-900 border-opacity-30 p-4 rounded-lg shadow-sm w-full h-64">
+            <div className="flex flex-col items-start space-y-1">
+              <div className="flex items-center space-x-2">
+                <PencilSquareIcon className="h-10 w-10 text-blue-700" />
+                <span className="text-blue-900 font-bold text-lg ">View & Edit Leads</span>
+              </div>
+              <span className="text-blue-900 ">Manage and track your existing leads.</span>
+            </div>
+            <div className="absolute bottom-4 right-4 text-black flex flex-col space-y-1">
+              {/* <span className="font-bold text-blue-900" >Manage Leads</span> */}
+              <Link href="/lead/create">
+                <span className="text-blue-900">Managed Leads</span>
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </Layout>
   );
