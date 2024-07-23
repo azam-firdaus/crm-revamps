@@ -11,13 +11,15 @@ import {
   BookOpenIcon, PencilSquareIcon
 } from '@heroicons/react/24/outline';
 
-const UserList: React.FC = () => {
+const LeadIndexPage: React.FC = () => {
   return (
     <Layout>
+      <div className="flex items-center space-x-2 mb-4">
+        <FunnelIcon className="h-6 w-6 text-black" />
+        <span className="text-black font-bold text-lg">Leads</span>
+      </div>
       <div className="min-h-screen">
-        
-        
-        <div className="relative px-8 py-4 bg-blue-100 rounded-lg shadow-md w-full">
+        <div className="mt-5 relative px-8 py-4 bg-blue-100 rounded-lg shadow-md w-full">
           <div className="flex items-center justify-between">
             <span className="text-sm font-light text-gray-600 dark:text-gray-400">Mar 10, 2019</span>
             
@@ -26,7 +28,7 @@ const UserList: React.FC = () => {
             <p className="text-xl font-bold text-blue-500 ">
               Transform Leads into Loyal Customers
             </p>
-            <p className="text-lg mt-3 font-bold text-blue-900 ">
+            <p className="text-lg mt-3 text-blue-900 ">
               Effortlessly organize, track, and nurture leads from 
             </p>
           </div>
@@ -61,7 +63,7 @@ const UserList: React.FC = () => {
             </div>
             <div className="absolute bottom-4 right-4 text-black flex flex-col space-y-1">
               {/* <span className="font-bold text-blue-900" >Manage Leads</span> */}
-              <Link href="/lead/create">
+              <Link href="/lead/list">
                 <span className="text-blue-900">Managed Leads</span>
               </Link>
             </div>
@@ -72,4 +74,4 @@ const UserList: React.FC = () => {
   );
 };
 
-export default UserList;
+export default LeadIndexPage;

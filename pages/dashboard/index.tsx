@@ -15,7 +15,11 @@ import {
 const Dashboard: React.FC = () => {
   return (
     <Layout>
-      <div className="relative px-8 py-4 bg-blue-100 rounded-lg shadow-md w-full h-64">
+      <div className="flex items-center space-x-2 mb-4">
+        <HomeIcon className="h-6 w-6 text-black" />
+        <span className="text-black font-bold text-lg">Home</span>
+      </div>
+      <div className="mt-5 relative px-8 py-4 bg-blue-100 rounded-lg shadow-md w-full h-64">
         <div className="absolute bottom-0 right-0">
           <Image
             src="/card_image.svg"
